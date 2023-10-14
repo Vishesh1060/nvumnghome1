@@ -1,5 +1,5 @@
 @media (max-width:600px){
-    #logoimg{
+    .logoimg{
         display:none !important;
     }
     #specialkeytext{

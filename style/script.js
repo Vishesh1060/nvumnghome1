@@ -1,6 +1,6 @@
 // Define the data for the line chart
 var data = {
-  labels: ["2018-19", "2019-20", "2020-21", "2021-22","2022-23","01/2023-10/2023"], // The time labels for the x-axis
+  labels: ["2018-19", "2019-20", "2020-21", "2021-22","2022-23","03/2023-10/2023"], // The time labels for the x-axis
   datasets: [
     {
       label: "Amount Loaned (In Rupees)", // The name of the data series
@@ -33,7 +33,7 @@ var lChart = new Chart(ctx, {
   }
 });
 var data2 = {
-  labels: ["2018-19", "2019-20", "2020-21", "2021-22","2022-23","01/2023-10/2023"], // The time labels for the x-axis
+  labels: ["2018-19", "2019-20", "2020-21", "2021-22","2022-23","03/2023-10/2023"], // The time labels for the x-axis
   datasets: [
     {
       label: "Fixed Deposit Amount reserved in banks (Rupees)", // The name of the data series
@@ -67,7 +67,7 @@ var fChart = new Chart(ctx, {
 });
 
 var data3 = {
-  labels: ["2018-19", "2019-20", "2020-21", "2021-22","2022-23","01/2023-10/2023"], // The time labels for the x-axis
+  labels: ["2018-19", "2019-20", "2020-21", "2021-22","2022-23","03/2023-10/2023"], // The time labels for the x-axis
   datasets: [
     {
       label: "Number of Members of the society", // The name of the data series
@@ -101,7 +101,7 @@ var mChart = new Chart(ctx, {
 });
 
 var data4 = {
-  labels: ["2018-19", "2019-20", "2020-21", "2021-22","2022-23","01/2023-10/2023"], // The time labels for the x-axis
+  labels: ["2018-19", "2019-20", "2020-21", "2021-22","2022-23","03/2023-10/2023"], // The time labels for the x-axis
   datasets: [
     {
       label: "Income of the Society (INR)", // The name of the data series
@@ -135,7 +135,7 @@ var dirincchart = new Chart(ctx, {
 });
 
 var data5 = {
-  labels: ["2018-19", "2019-20", "2020-21", "2021-22","2022-23","01/2023-10/2023"], // The time labels for the x-axis
+  labels: ["2018-19", "2019-20", "2020-21", "2021-22","2022-23","03/2023-10/2023"], // The time labels for the x-axis
   datasets: [
     {
       label: "Dividend Paid By the Society", // The name of the data series

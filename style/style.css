@@ -5,6 +5,9 @@
     #specialkeytext{
         font-size: 3rem !important;
     }
+    .bigcard{
+        font-size: 3rem !important;
+    }
 }
 #logo{
     max-width: 200px;

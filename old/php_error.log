@@ -1,0 +1,6 @@
+[06-Oct-2023 08:36:34 UTC] PHP Warning:  Undefined array key 2 in C:\MAMP\htdocs\tutorial.php on line 8
+[06-Oct-2023 08:36:50 UTC] PHP Warning:  Undefined variable $check in C:\MAMP\htdocs\tutorial.php on line 8
+[06-Oct-2023 08:37:07 UTC] PHP Parse error:  syntax error, unexpected token "if" in C:\MAMP\htdocs\tutorial.php on line 9
+[06-Oct-2023 08:37:13 UTC] PHP Parse error:  syntax error, unexpected token "if" in C:\MAMP\htdocs\tutorial.php on line 9
+[06-Oct-2023 08:37:14 UTC] PHP Parse error:  syntax error, unexpected token "if" in C:\MAMP\htdocs\tutorial.php on line 9
+[06-Oct-2023 10:55:46 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in C:\MAMP\htdocs\Initialize.php on line 2

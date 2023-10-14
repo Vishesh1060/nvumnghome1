@@ -1,0 +1,396 @@
+<?php
+    $test=false;
+    require_once('core/secure_db.php');
+    require_once('core/secure_core.php');
+    
+    function initialize(){
+        global $test;
+        session_start();
+        $boostrapcss="<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css'>";
+        $style="<link rel='stylesheet' href='style/style.css'>";
+        $fonts="<link rel='stylesheet' href='style/typography.css'>";
+        $base="<link rel='stylesheet' href='style/base.css'>";
+        echo $boostrapcss;
+        echo $style;
+        echo $base;
+        echo $fonts; 
+        if ($test==true){
+            echo "<p>Initialization✅</p>";
+        }
+    }
+    function terminate($test=false){
+        echo "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'></script>";
+        echo "<script src='style/npm_js_core2.11.8.min.js'></script>";
+        echo "<script src='https://cdn.jsdelivr.net/npm/chart.js'></script>";
+    }
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+<?php
+    initialize();
+    require_once('core/conn_db.php');
+    terminate();
+?>
+    <div>
+        <div class="bgimg">
+            <div class="container-xl">
+                <div class="pt-5 mx-md-5 mx-3 mb-5" id="nav">        
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light rounded-1 px-5">
+                        <!-- Navbar title -->
+                        <a class="navbar-brand" href="/home"><strong>NCUTSCL</strong></a>
+                        <!-- Collapsible button -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <!-- links 
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/all">All Categories</a>
+                                </li>
+                            </ul>
+                                
+                             Login/Sign Out Button -->
+                             <div class="navbar-nav ms-auto">
+                                    <button class="btn btn-dark text-center" type="button" href="#" disabled>Sign in</button>
+                            </div>   
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div  class="container-sm">
+                <div class="row mt-5 justify-content-around ml-3" id="key">
+                    <div id="PageTitle" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <p id="specialkeytext">Navumang</p>
+                            <p id="keytext">Cooperative (Urban) Thrift<br>and Credit Society Limited<p>
+                            <p class="mt-1 mb-0">Welcome to the bank that grows with you.</p>        
+                            <p class="mt-0 mb-4">We help you develop a habit of saving money, while giving you a high return on your savings. Members of Navumang have a say in how we run our business because we are not just a bank, we are a family.</p>
+                            <a class="btn btn-outline-light text-center" type="button" href="/finance.php">See Financial Statistics</a>
+                    </div>
+                    <div class="logo col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <img id="logoimg" src="imgs/bg/image002b.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bgcards" class="py-5">       
+                <div class="row d-flex justify-content-center text-align-center align-items-stretch g-1" id="cards">
+                    <div class="col-lg-3">
+                        <div class="card border-1 h-100">
+                            <div class="card-body text-center">
+                                <h1 class="card-title" id="card3">4%</h1>
+                                <p class="card-text my-3" style="color:black;">Interest Rate for Optional Deposits.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card border-1 h-100">
+                            <div class="card-body text-center">
+                                <h1 class="card-title" id="card3">5%</h1>
+                                <p class="card-text my-3" style="color:black;">Dividend Paid for 2022-23.</p>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="col-lg-3">
+                        <div class="card border-1 h-100">
+                            <div class="card-body text-center">
+                                <h1 class="card-title" id="card1">8%</h1>
+                                <p class="card-text my-3" style="color:black;">Compulsory Deposit Interest rate.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card border-1 h-100">
+                            <div class="card-body text-center">
+                                <h1 class="card-title" id="card2">12%</h1>
+                                <p class="card-text my-3" style="color:black;">Interest Rate for Loans.</p>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="col-lg-12">
+                        <div class="card border-1 h-100">
+                            <div class="card-body text-center">
+                                <h1 class="card-title" id="card3">₹ 1,50,000</h1>
+                                <p class="card-text my-3" style="color:black;">Maximum Loan Amount</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card border-1 h-100">
+                            <div class="card-body text-center">
+                                <h1 class="card-title" id="card3">₹ 200</h1>
+                                <p class="card-text my-3" style="color:black;">Monthly Compulsory Deposit Amount</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-1 h-100">
+                            <div class="card-body text-center">
+                                <h1 class="card-title" id="card3">₹ 25,000</h1>
+                                <p class="card-text my-3" style="color:black;">Death Benefit from Membership Welfare Fund</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    <div class="container" id="base">        
+        <div class="row g-5">
+            <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                Latest from Navumang
+            </h3>
+            <article class="blog-post">
+                <h2 class="display-5 link-body-emphasis mb-1">5th Annual General Meeting</h2>
+                <p class="blog-post-meta">To be held on 15th October 2023</p>
+
+                <p>Greetings to all our esteemed members,<br>We are delighted to announce that our cooperative society will be holding its <strong>5th annual general meeting</strong> at the venue:
+                <strong><br><br>28/34-A, Rana Pratap Street No.1, Chajjupur, East Babarpur, Shahdara, Delhi-110032<br></strong>on <strong>Saturday, 15th October 2023</strong><br>at<strong> 10:00 AM.<br></strong>
+                <br>We cordially invite all of you to attend this important event and participate in the discussions and decisions that will shape the future of our society.
+                As per the notice sent to you on <strong>Wednesday, 30th September 2023</strong> via email or speed post to your registered address, the agenda for the meeting is as follows:<br>
+                <ul>
+                    <li> Confirmation of the minutes of the previous annual general meeting.</li>
+                    <li> Presentation and adoption of the annual report and audited accounts for the year ended 31st March 2023.</li>
+                    <li>Consideration of any other matter with the permission of the chair.</li>
+                </ul>
+                We look forward to seeing you at the meeting and hearing your valuable inputs and suggestions. Together, we can make our cooperative society stronger and more successful.<br><br>
+                <hr>
+                </p>
+                <p style="opacity:80%">
+                Thank you for your continued support and cooperation.<br>
+                Sincerely,<br>
+                Navumang Cooperative Urban Thrift and Credit Society Ltd.<br>
+            </article>
+
+            <article class="blog-post">
+                <h2 class="display-5 link-body-emphasis mb-1">Independance Day Celebration</h2>
+                <p class="blog-post-meta">15th August 2015 by Navumang Management Committee.</p>
+
+                <p>A small program was organized on the occasion of 69th Independence Day at Saraswati Marg, Chhajjupur on behalf of Navumang Mitra Mandal. In preparation for this program, a video (with patriotic songs) was also shown by the Mandal on the night of 14.08.15, in which the details of the previous efforts of the Mandal were given and the people of the area were invited.</p>
+                <p>At 7 am on 15.08.15, some neighbours gathered as per schedule. Senior citizen <strong>Shri Rajveer Sharma ji</strong> hoisted the flag. They all sat together on TV. But watched the Prime Minister's speech live and celebrated by distributing laddoos.</p>
+                <hr>
+                </p>
+                <p style="opacity:80%">
+                Truly a proud moment for all Indians.<br>
+                Jai Hind,<br>
+                Navumang Cooperative Urban Thrift and Credit Society Ltd.<br>
+            </article>
+
+            <nav class="blog-pagination" aria-label="Pagination">
+                <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+                <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+            </nav>
+
+            </div>      
+            <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-body-tertiary rounded">
+                <h4 class="fst-italic">About</h4>
+                <p class="mb-0">Navumang Cooperative (Urban) Thrift and Credit Society came into existence in June 2018 and it has grown leaps and bounds in its service to its community. Strictly based on the very principles of co-operative movement in our Country.<br><br>NCUTCSL has completed 5 years of operation and today it is a family of around 100 members.</p>
+                </div>
+
+                <div>
+                <h4 class="fst-italic">Gallery</h4>
+                <ul class="list-unstyled">
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                                <img class="img-fluid" style="max-height:96px;width:100%;" src="imgs/gallery/Independanceday2015.jpg" alt="">
+                                <div class="col-lg-8">
+                                <h6 class="mb-0">Independance Day Celebration</h6>
+                                <small class="text-body-secondary">September 15, 2015</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                                <img class="img-fluid" style="max-height:96px;width:100%;" src="imgs/AGM/DSC05181.jpg" alt=""><div class="col-lg-8">
+                                <h6 class="mb-0">First AGM</h6>
+                                <small class="text-body-secondary">29th May 2016.</small>
+                                </div>
+                            </a>
+                        </li>
+                </ul>
+                </div>
+
+                <div class="p-4">
+                <h4 class="fst-italic">Archives</h4>
+                <ol class="list-unstyled mb-0">
+                    <li><a href="imgs\Registration Certificate.jpg">Registration Certificate</a></li>
+                    <li><a href="#" data-bs-toggle="tooltip" data-bs-title="Member Login Required">Society Bye-Laws</a></li>
+                </ol>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-lg">
+            <div id="carousel">
+                <div id="myCarousel" class="carousel slide mb-6 pointer-event" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 7" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="7" aria-label="Slide 8" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="8" aria-label="Slide 9" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="9" aria-label="Slide 10" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="10" aria-label="Slide 1" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="11" aria-label="Slide 12" class="active" aria-current="true"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="imgs\AGM\DSC05180.JPG" alt="Image">
+                            <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>First General Body Meeting</h1>
+                                <p class="opacity-75">29th May 2016.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="imgs\AGM\DSC05181.JPG" alt="Image">
+                            <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>First General Body Meeting</h1>
+                                <p class="opacity-75">29th May 2016.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="imgs\AGM\DSC05183.JPG" alt="Image">
+                            <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>First General Body Meeting</h1>
+                                <p class="opacity-75">29th May 2016.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="imgs\AGM\DSC05185.JPG" alt="Image">
+                            <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>First General Body Meeting</h1>
+                                <p class="opacity-75">29th May 2016.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="imgs\AGM\DSC05188.JPG" alt="Image">
+                            <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>First General Body Meeting</h1>
+                                <p class="opacity-75">29th May 2016.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="imgs\AGM\DSC05192.JPG" alt="Image">
+                            <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>First General Body Meeting</h1>
+                                <p class="opacity-75">29th May 2016.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="imgs\AGM\DSC05197.JPG" alt="Image">
+                            <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>First General Body Meeting</h1>
+                                <p class="opacity-75">29th May 2016.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="imgs\AGM\DSC05201.JPG" alt="Image">
+                            <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>First General Body Meeting</h1>
+                                <p class="opacity-75">29th May 2016.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="imgs\AGM\DSC05208.JPG" alt="Image">
+                            <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>First General Body Meeting</h1>
+                                <p class="opacity-75">29th May 2016.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="imgs\AGM\DSC05216.JPG" alt="Image">
+                            <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>First General Body Meeting</h1>
+                                <p class="opacity-75">29th May 2016.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="imgs\AGM\DSC05218.JPG" alt="Image">
+                            <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>First General Body Meeting</h1>
+                                <p class="opacity-75">29th May 2016.</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item active">
+                            <img class="img-fluid" src="imgs\AGM\DSC05254.JPG" alt="Image">
+                            <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>First General Body Meeting</h1>
+                                <p class="opacity-75">29th May 2016.</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>            
+            </div>
+    </div>
+
+    <footer class="container py-5">
+  
+    <div class="row">
+    <div class="col-3 col-md">
+        <img src="imgs\bg\image002b.png" style="max-width=150px;" class="img-fluid" alt="">
+      <small class="d-block mb-3 text-muted">© 2024</small>
+    </div>
+    <div class="col-3 col-md">
+      <h7>Download Resources</h7>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="imgs\Registration Certificate.jpg">Registration Certificate</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h7>About</h7>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#">Financial Statistics</a></li>
+        <li><a class="link-secondary" href="#">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+[13-Oct-2023 05:29:51 UTC] PHP Warning:  Undefined property: mysqli::$connection_status in C:\MAMP\htdocs\core\secure_db.php on line 20
+[13-Oct-2023 05:30:56 UTC] PHP Warning:  Undefined property: mysqli::$stat in C:\MAMP\htdocs\core\secure_db.php on line 20
+[13-Oct-2023 05:31:18 UTC] PHP Warning:  Undefined property: mysqli::$poll in C:\MAMP\htdocs\core\secure_db.php on line 20
+[13-Oct-2023 05:31:51 UTC] PHP Warning:  Undefined property: mysqli::$poll in C:\MAMP\htdocs\core\secure_db.php on line 20
+[13-Oct-2023 05:31:52 UTC] PHP Warning:  Undefined property: mysqli::$poll in C:\MAMP\htdocs\core\secure_db.php on line 20
+[13-Oct-2023 05:31:56 UTC] PHP Fatal error:  Uncaught ArgumentCountError: mysqli::poll() expects at least 4 arguments, 0 given in C:\MAMP\htdocs\core\secure_db.php:20
+Stack trace:
+#0 C:\MAMP\htdocs\core\secure_db.php(20): mysqli::poll()
+#1 C:\MAMP\htdocs\index.php(27): require_once('C:\\MAMP\\htdocs\\...')
+#2 {main}
+  thrown in C:\MAMP\htdocs\core\secure_db.php on line 20
+[13-Oct-2023 08:39:25 UTC] PHP Warning:  Undefined variable $mysqli in C:\MAMP\htdocs\core\secure_db.php on line 32
+[13-Oct-2023 08:39:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\MAMP\htdocs\core\secure_db.php:32
+Stack trace:
+#0 C:\MAMP\htdocs\index.php(30): getAccData(1)
+#1 {main}
+  thrown in C:\MAMP\htdocs\core\secure_db.php on line 32
+[13-Oct-2023 08:40:00 UTC] PHP Warning:  Undefined variable $true in C:\MAMP\htdocs\index.php on line 30
+[13-Oct-2023 08:40:00 UTC] PHP Warning:  Undefined variable $mysqli in C:\MAMP\htdocs\core\secure_db.php on line 32
+[13-Oct-2023 08:40:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\MAMP\htdocs\core\secure_db.php:32
+Stack trace:
+#0 C:\MAMP\htdocs\index.php(31): getAccData(1)
+#1 {main}
+  thrown in C:\MAMP\htdocs\core\secure_db.php on line 32
+[13-Oct-2023 08:42:28 UTC] PHP Warning:  Undefined variable $test in C:\MAMP\htdocs\core\conn_db.php on line 15
+[13-Oct-2023 08:42:28 UTC] PHP Warning:  Undefined variable $mysqli in C:\MAMP\htdocs\core\secure_db.php on line 5
+[13-Oct-2023 08:42:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\MAMP\htdocs\core\secure_db.php:5
+Stack trace:
+#0 C:\MAMP\htdocs\index.php(31): getAccData(1)
+#1 {main}
+  thrown in C:\MAMP\htdocs\core\secure_db.php on line 5
+[13-Oct-2023 08:43:01 UTC] PHP Warning:  Undefined variable $mysqli in C:\MAMP\htdocs\core\secure_db.php on line 5
+[13-Oct-2023 08:43:01 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\MAMP\htdocs\core\secure_db.php:5
+Stack trace:
+#0 C:\MAMP\htdocs\index.php(32): getAccData(1)
+#1 {main}
+  thrown in C:\MAMP\htdocs\core\secure_db.php on line 5
+[13-Oct-2023 09:36:32 UTC] PHP Warning:  Undefined variable $mysqli in C:\MAMP\htdocs\core\secure_db.php on line 5
+[13-Oct-2023 09:36:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\MAMP\htdocs\core\secure_db.php:5
+Stack trace:
+#0 C:\MAMP\htdocs\index.php(32): getAccData(1)
+#1 {main}
+  thrown in C:\MAMP\htdocs\core\secure_db.php on line 5
+[13-Oct-2023 18:07:43 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting "," or ";" in C:\MAMP\htdocs\index.php on line 20
+[14-Oct-2023 09:34:08 UTC] PHP Parse error:  syntax error, unexpected token "}", expecting "," or ";" in C:\MAMP\htdocs\index.php on line 26

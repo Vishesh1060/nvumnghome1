@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Playfair Display";
+    src: url('../style/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf');
+}
+#header-text,#card1,#card2,#card3{
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
+}
+#keytext{
+    font-size: 2rem !important;
+}
+#keytext,#specialkeytext{
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
+    color:white;
+    font-weight: lighter;
+}
+#specialkeytext,#card1,#card2,#card3{
+    font-weight: bolder;
+    font-size: 4.8rem;
+    line-height: 5.3rem;
+    color:linear-gradient();
+    margin: 0;
+}
+#key{
+    color: white;
+}
+
+  

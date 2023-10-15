@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Playfair Display";
+    src: url("/style/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
+}
+#lgnbutton:hover{
+    background-color: #030812;
+}
+.specialkeytext{
+    color:white;
+    line-height: 2.4rem;
+    font-size: 3rem;
+    font-family:"Playfair Display",'Times New Roman', Times, serif;
+    align-self: center;
+}
+.keytext{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
+    font-size: 1rem;
+    opacity: 80%;
+}

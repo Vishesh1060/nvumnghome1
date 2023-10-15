@@ -6,7 +6,7 @@
     font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
 }
 #keytext{
-    font-size: 2rem !important;
+    font-size: 2rem;
 }
 #keytext,#specialkeytext{
     font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
@@ -17,7 +17,6 @@
     font-weight: bolder;
     font-size: 4.8rem;
     line-height: 5.3rem;
-    color:linear-gradient();
     margin: 0;
 }
 #key{

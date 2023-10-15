@@ -6,7 +6,7 @@
     font-family: "Playfair Display Light";
     src: url('../../style/fonts/Playfair_Display/static/PlayfairDisplay-Medium.ttf');
 }
-p{
+p,.carousel-indicators{
     margin: 0;
     margin-bottom: 0;
 }
@@ -19,15 +19,15 @@ body{
 .poptext{
     font-family: "Times New Roman", serif !important;
     font-weight: bolder;
-    font-size: 1.1rem;
-    line-height: 1.1rem;
+    font-size: 1.5rem;
+    line-height: 1.4rem;
     margin-bottom: 0.3rem;
 }
 .followup{
     font-family: "calibri","Verdana","Arial Narrow";
     opacity: 80%;
     font-size: 0.5rem;
-    line-height: 0.rem;
+    line-height: 0.5rem;
 }
 .keytext{
     font-family: "Playfair Display","Times New Roman", serif !important;

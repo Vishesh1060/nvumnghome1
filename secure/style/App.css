@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "Playfair Display";
+    src: url('../../style/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: "Playfair Display Light";
+    src: url('../../style/fonts/Playfair_Display/static/PlayfairDisplay-Medium.ttf');
+}
+p{
+    margin: 0;
+    margin-bottom: 0;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-body{
+    padding: 2%;
+}
+.poptext{
+    font-family: "Times New Roman", serif !important;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+.followup{
+    font-family: "calibri","Verdana","Arial Narrow";
+    opacity: 80%;
+    font-size: 0.5rem;
+    line-height: 0.rem;
+}
+.keytext{
+    font-family: "Playfair Display","Times New Roman", serif !important;
+    font-size: 1rem;
+    line-height: 0.7rem;
+    color:white;
+}
+.keytext,.specialkeytext{
+    color:white;
+    font-weight: lighter;
+    margin: 0;
+    margin-bottom: 3px;
+}
+.specialkeytext{
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    border-bottom: 2px;
+    border-color: white;
+    text-decoration: solid white;
+    margin: 0;
+}
+.base{
+    background: rgb(3,8,13);
+    width: 100vw;
+    height: 100vh;
+}

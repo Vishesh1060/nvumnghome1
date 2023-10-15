@@ -24,10 +24,10 @@ body{
     margin-bottom: 0.3rem;
 }
 .followup{
-    font-family: "calibri","Verdana","Arial Narrow";
+    font-family: "Segoe UI","Calibri","Verdana","Arial Narrow";
     opacity: 80%;
-    font-size: 0.5rem;
-    line-height: 0.5rem;
+    font-size: 0.7rem;
+    line-height: 1rem;
 }
 .keytext{
     font-family: "Playfair Display","Times New Roman", serif !important;
@@ -39,7 +39,7 @@ body{
     color:white;
     font-weight: lighter;
     margin: 0;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
 }
 .specialkeytext{
     font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
@@ -51,8 +51,23 @@ body{
     text-decoration: solid white;
     margin: 0;
 }
+.xltext.poptext{
+    font-size: 2.9rem;
+    line-height: 3rem;
+}
+.xltext.followup{
+    font-size: 1rem;
+    line-height: 0.9rem;
+}
+.xstext.followup{
+    font-size: 0.7rem;
+    line-height: 0.9rem;
+}
 .base{
     background: rgb(3,8,13);
     width: 100vw;
     height: 100vh;
+}
+.text-successful{
+    color:lightgreen !important;
 }

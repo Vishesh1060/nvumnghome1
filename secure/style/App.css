@@ -74,7 +74,27 @@ body{
 .text-successful{
     color:lightgreen !important;
 }
-#i-bell:hover,#i-bell:focus{
+
+.bnav {
+    background-color: white;
+}
+
+/* Style the icons on the inactive tabs */
+.nav-link svg {
+    color: rgb(3,8,13);
+}
+/* Style the active tab */
+.nav-item .active {
+    background-color: rgb(3,8,13) !important;
+}
+
+.custom-nav .active svg,.nav-link.active svg {
+    fill: white;
+    color: white;
+}
+svg:hover,svg:focus{
     fill: lightblue;
     stroke-width: 2;
 }
+
+

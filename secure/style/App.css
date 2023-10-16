@@ -89,7 +89,7 @@ body{
 }
 
 .custom-nav .active svg,.nav-link.active svg {
-    fill: white;
+    fill: #ffffffe7;
     color: white;
 }
 svg:hover,svg:focus{

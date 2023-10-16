@@ -1,0 +1,21 @@
+
+.allcrdeb div a{
+    display: block;
+    text-decoration: none;
+    border-radius: 14px;  
+    color:rgb(3,8,13);  
+}
+.activetab{
+    display: block;
+    color: white !important;
+    background-color: rgb(3,8,13);
+    border-radius: 14px;
+    text-decoration: none;
+}
+.allcrdeb div a:hover,.allcrdeb div a:hover{
+    background-image: radial-gradient(circle, rgba(9,46,94,1) 9%, rgba(3,8,19,1) 50%, rgba(3,27,60,1) 100%);
+    color: white;
+}
+thead tr th{
+    font-size: 1rem;
+}

@@ -9,91 +9,58 @@
     <link rel='stylesheet' href='../style/style.css'>
     <link rel='stylesheet' href='../style/base.css'>    
     <link rel="stylesheet" href="style/app.css">
+    <link rel="stylesheet" href="style/transactions.css">
 </head>
 <body>
 <div class="base">
     <div class="container-md pt-4 g-5">
             <div class="row">
-                <div class="col pe-0">
-                    <p class="keytext">Welcome,</p>
-                    <p class="specialkeytext">Username Surname</p>
-                </div>
-                <div class="col-2 px-3 text-white">
-                    <svg class="i-bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 40" width="24" height="41" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                        <path d="M8 17 C8 12 9 6 16 6 23 6 24 12 24 17 24 22 27 25 27 25 L5 25 C5 25 8 22 8 17 Z M20 25 C20 25 20 29 16 29 12 29 12 25 12 25 M16 3 L16 6" />
-                    </svg>
+                <div class="col text-center">
+                    <p class="keytext">Acc. No. 91</p>
+                    <p class="specialkeytext">Account Transactions</p>
                 </div>
             </div>
-            <div class="row pt-4">                
-                <div class="card border-1 rounded-1">
-                    <div class="card-body">
-                        <div class="row px-2 pt-2 text-center">    
-                            <div class="col p-0">
-                                <p class="xltext followup">Total Account Value</p>
-                                <p class="xltext poptext">₹ 15789.00</p>    
-                            </div>
-                        </div>
-                        <div class="row px-2 py-2 pb-3 text-center">
-                            <div class="col p-0">
-                                <p class="followup">Compulsory Deposit</p>
-                                <p class="poptext">₹ 4100</p>
-                            </div>
-                            <div class="col p-0">
-                                <p class="followup">Share Money</p>
-                                <p class="poptext">₹ 10,000</p>    
-                            </div>
-                        </div>
-                        <div class="row px-2 py-2 pb-3 text-center">    
-                            <div class="col p-0">
-                                <p class="followup">Optional Deposit</p>
-                                <p class="poptext">₹ 1200</p>
-                            </div>
-                            <div class="col p-0">
-                                <p class="xstext followup">MWF Status</p>
-                                <p class="poptext">Active</p>
-                            </div>
+            <div class="row mt-3">
+                <div class="col d-flex justify-content-center">
+                    <div class="card rounded-pill w-75">
+                        <div class="card-body text-center p-0">
+                            <div class="row allcrdeb">
+                                <div class="col m-0 pe-0">
+                                    <a class="w-100 activetab" href="/secure/account.html">All</a>
+                                </div>
+                                <div class="col m-0 p-0">
+                                    <a class="w-100" href="/secure/account.html?=credit">Credit</a>
+                                </div>
+                                <div class="col m-0 ps-0">
+                                    <a class="w-100" href="/secure/account.html?=debit">Debit</a>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row pt-3 text-white">
-                <h6>Pending Dues</h6>
-                <hr class="p-0 mb-2">
-                <div class="row">
-                    <div class="col">
-                        <p>Loan Amount</p>
-                        <p class="xstext followup">Outstanding</p>
-                    </div>
-                    <div class="col">
-                        <p>₹ 5290</p>
-                        <p class="xstext followup" style="text-decoration: underline;">See Loan Details.</p>
-                    </div>
-                </div>
-                <div class="row pt-2">
-                    <div class="col">    
-                        <p class="display">EMI</p><p class="xstext followup">October 2023</p>
-                    </div>
-                    <div class="col">
-                        <p class="text-successful">Paid<p class="text-successful xstext followup" href="#">See Payment Info.</p></p>
-                    </div>
-                </div>
-                <div class="row pt-2">
-                    <div class="col">    
-                        <p class="display">Compulsory Deposit</p><p class="xstext followup">Monthly Payment Details</p>
-                    </div>
-                    <div class="col">
-                        <p class="text-successful">Paid in Advance<p class="text-successful xstext followup" href="#">Paid upto <strong>December 2023</strong></p></p>
-                    </div>
-                </div>
-                <div class="row pt-2">
-                    <div class="col">    
-                        <p class="display">MWF</p><p class="xstext followup">Semi-Annual Payment</p>
-                    </div>
-                    <div class="col">
-                        <p class="text-successful">Paid<p class="text-successful xstext followup" href="#">Paid upto <strong>December 2023</strong></p></p>
-                    </div>
-                </div>
-
+            <hr class="my-3" style="color: white;">
+            <div class="row pt-3 text-center" style="color: rgb(3,8,13);">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Txn. No.</th>
+                            <th scope="col">Cr./Dr.</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Payment Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">012</th>
+                            <td>Credit</td>
+                            <td>1200/-</td>
+                            <td>01/03/12</td>
+                            <td>GPAY<br>UTR:1002030201</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="row pt-3 text-white">
                 <h6>Upcoming Payments</h6>
@@ -150,14 +117,14 @@
                 </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/secure/home.html">
+            <a class="nav-link" href="/secure/home.html">
                 <svg id="i-home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="31" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                     <path d="M12 20 L12 30 4 30 4 12 16 2 28 12 28 30 20 30 20 20 Z" />
                 </svg>
              </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/secure/account.html"><svg id="i-archive" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="31" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <a class="nav-link active" href="/secure/account.html"><svg id="i-archive" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="31" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M4 10 L4 28 28 28 28 10 M2 4 L2 10 30 10 30 4 Z M12 15 L20 15" />
             </svg></a>
           </li>

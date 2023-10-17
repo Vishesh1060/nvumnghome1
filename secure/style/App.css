@@ -63,6 +63,19 @@ body{
     font-size: 1rem;
     line-height: 0.9rem;
 }
+.trxntable div div p{
+    padding-top: 3px;
+}
+.trxntable div div p.xstext{
+    font-size: 0.5rem;
+    opacity: 80%;
+    margin: 0;
+    padding: 0;
+}
+.trxntable p.xstext{
+    opacity: 85%;
+    font-size: 0.7rem;
+}
 .xstext.followup{
     font-size: 0.7rem;
     line-height: 0.9rem;
@@ -74,7 +87,9 @@ body{
 .text-successful{
     color:lightgreen !important;
 }
-
+.text-failure{
+    color:rgb(255, 155, 155)!important;
+}
 .bnav {
     background-color: white;
 }

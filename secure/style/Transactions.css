@@ -16,6 +16,11 @@
     background-image: radial-gradient(circle, rgba(9,46,94,1) 9%, rgba(3,8,19,1) 50%, rgba(3,27,60,1) 100%);
     color: white;
 }
-thead tr th{
-    font-size: 1rem;
+.trxntable{
+    color: white;
+    font-size: 0.7rem;
+}
+.trxntable div{
+    margin: 0;
+    padding: 0;
 }

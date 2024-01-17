@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCUTCSL::User Access::Home</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='../style/typography.css'>
+    <link rel='stylesheet' href='../style/style.css'>
+    <link rel='stylesheet' href='../style/base.css'>    
+    <link rel="stylesheet" href="style/app.css">
+</head>
+<body>
+<div class="base">
+    <div class="container-md pt-4 g-5">
+        <div class="col text-white" >
+            <div class="row pb-2">
+                <h1 class="">Amount<br>Calculation</h1>
+                <p class="xstext">Calculate your Installment details.<br>Then press next to select Payment Option.</p>
+            </div>
+            <div class="row py-3">
+                <p>Account Details:</p>
+                <div class="col xstext">                     
+                   <div class="row">
+                        <div class="col"><p>Active Loan:</p></div>
+                        <div class="col-3"><p class="me-auto text-failure">Yes</p></div>    
+                    </div> 
+                    <div class="row">
+                        <div class="col">
+                            <p>Outstanding Loan Amount:</p>         
+                        </div>
+                        <div class="col-3 me-auto">
+                           <p>₹ 50,000/-</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            Loan Installment Amount:        
+                        </div>
+                        <div class="col-3 me-auto">
+                            <p>₹ 5,000/-</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <p>Outstanding penalties:</p>        
+                        </div>
+                        <div class="col-3 me-auto">
+                            <p class="text-successful">None</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+<form action="post" id="InstallmentData">
+            <div class="row py-3">
+                <p class="mb-2 xstext">Fill the following details:</p>
+                <hr>
+                <h5>Duration</h5>
+                <p class="xstext followup">Members are encouraged to make advance payments to avoid any late penalty.</p>
+                <div class="col my-3">
+                    <div class="card border-1 rounded-1">
+                        <div class="card-body">
+                            <div class="row mini-card">
+                                <div class="col mini-card">
+                                    <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(12)">12<br>Months</button>
+                                </div>
+                                <div class="col mini-card">
+                                    <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(8)">8<br>Months</button>
+                                </div>
+                                <div class="col mini-card">
+                                    <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(6)">6<br>Months</button>
+                                </div>
+                            </div>
+                            <div class="row mini-card">
+                                <div class="col mini-card">
+                                    <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(3)">3<br>Months</button>
+                                </div>
+                                <div class="col mini-card">
+                                    <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(1)">1<br>Month</button>
+                                </div>
+                                <div class="col mini-card">
+                                    <button id="customButton" type="button" class="btn btn-outline-dark mini-button" onclick="toggleCustomInput()">Custom</button>
+                                    <input type="number" id="customInput" class="form-control" style="display:none;" placeholder="Months" onchange="setCustomMonth(this.value)">
+                                </div>
+                            </div>
+                            <input type="hidden" id="selectedMonth" name="selectedMonth" value="">
+                        </div>
+                    </div>
+                </div>
+                <h5>Additional Payment</h5>
+                <p class="xstext followup">Optional Deposit offers a 3% interest rate.</p>
+                <div class="col my-3">
+                    <div class="card border-1 rounded-1">
+                        <div class="card-body">
+                            <div class="row mini-card">
+                                <div class="col mini-card">
+                                    <a class="btn disabled btn-outline-dark mini-button extra">Fixed Deposit*</a>
+                                </div>
+                                <div class="col mini-card">
+                                    <a id="extraOD" class="btn btn-outline-dark mini-button extra">Extra OD Deposit</a>
+                                </div>
+                                <div class="col mini-card">
+                                    <a id="noneBtn" class="btn btn-outline-dark mini-button extra active">None</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <p class="xstext followup mt-3">*Fixed Deposit Service may be added in future</p>
+                <input type="submit" class="btn btn-outline-light my-3 w-100" name="Next" id="Next">
+</form>            
+            </div>
+            <div class="row py-2">
+                <h1>Total Amount</h1>
+                <hr>
+                <div class="col xstext">
+                    <div class="row">
+                        <div class="col">
+                            <p>Loan Installment</p>
+                        </div>
+                        <div class="col">
+                            <p>₹ 6000 (500/Month)</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>Loan Late Penalty</p>
+                        </div>
+                        <div class="col">
+                            <p>₹ 50</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>CD Amount</p>
+                        </div>
+                        <div class="col">
+                            <p>₹ 1200 (200/Month)</p>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>MWF Amount</p>
+                        </div>
+                        <div class="col">
+                            <p>₹ 12000 (1000/Month)</p>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col">
+                            <p><strong>Total Amount</strong></p>
+                        </div>
+                        <div class="col">
+                            <p><strong>₹ 22800 (1900/Month)</strong></p>
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col spacer">
+                            <br><br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="bnav container-fluid p-0 bg-light text-dark fixed-bottom">
+        <ul class="nav nav-tabs justify-content-center custom nav" data-bs-theme="dark">
+            <li class="nav-item">
+                <a href="\" class="nav-link h-100">
+                    <img width="30px" class="img-fluid" src="..\imgs\bg\image002b.png" alt="">
+                </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/secure/home.html">
+                <svg id="i-home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="31" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path d="M12 20 L12 30 4 30 4 12 16 2 28 12 28 30 20 30 20 20 Z" />
+                </svg>
+                </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/secure/account.html"><svg id="i-archive" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="31" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M4 10 L4 28 28 28 28 10 M2 4 L2 10 30 10 30 4 Z M12 15 L20 15" />
+            </svg></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/secure/notifications.html"><svg class="i-bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="31"  fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M8 17 C8 12 9 6 16 6 23 6 24 12 24 17 24 22 27 25 27 25 L5 25 C5 25 8 22 8 17 Z M20 25 C20 25 20 29 16 29 12 29 12 25 12 25 M16 3 L16 6" />
+            </svg></a>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link active" href="/secure/deposit.html"><svg id="i-import" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="31" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M28 22 L28 30 4 30 4 22 M16 4 L16 24 M8 16 L16 24 24 16" />
+            </svg></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/secure/user.html"><svg id="i-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="31" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M22 11 C22 16 19 20 16 20 13 20 10 16 10 11 10 6 12 3 16 3 20 3 22 6 22 11 Z M4 30 L28 30 C28 21 22 20 16 20 10 20 4 21 4 30 Z" />
+            </svg></a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+<script src="script/ui2.js"></script>
+<script src='../style/npm_js_core2.11.8.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'></script> 
+</body>
+</html>

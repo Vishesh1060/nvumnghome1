@@ -31,47 +31,180 @@
                 <p class="keytext">Username Surname</p>
                 <p class="specialkeytext">Account No. 81</p>
             </div>
-            <div id="editOptions" class="d-none">
-                <div class="d-grid gap-2 mt-2" style="width: 80%; margin-left: auto; margin-right: auto;">
-                  <button class="btn btn-outline-light text-start position-relative" type="button">
-                    Edit Registered Phone Number
-                    <span class="position-absolute top-50 end-0 translate-middle-y me-3">&gt;</span>
-                  </button>
-                  <button class="btn btn-outline-light text-start position-relative" type="button">
-                    Edit Registered Address
-                    <span class="position-absolute top-50 end-0 translate-middle-y me-3">&gt;</span>
-                  </button>
-                  <button class="btn btn-outline-light text-start position-relative" type="button">
-                    Edit PAN number
-                    <span class="position-absolute top-50 end-0 translate-middle-y me-3">&gt;</span>
-                  </button>
+            <div class="col-2 pr-2" style="display: flex;align-items:center; max-width: fit-content;">
+              <svg width="32" height="31" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="9" r="3" stroke="#FFFFFF" stroke-width="1.5"/>
+                  <path d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+          </div>
+        </div>
+        <div class="row pt-4">
+          <hr style="color: white;">
+          <div class="col">
+            <div class="row text-white">
+              <p class="xltext">Member Since <strong>2024</strong></p>
+              <div class="row xstext">
+                <div class="col">
+                  <p>Registered Phone Number :</p> 
+                </div>
+                <div class="col-5 ">
+                  <p>9991929190</p>
                 </div>
               </div>
-            <div class="col-2 px-3" style="display: flex;align-items:center; max-width: fit-content;">
-                <svg width="32" height="31" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="9" r="3" stroke="#FFFFFF" stroke-width="1.5"/>
-                    <path d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-                    <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-            </div>
-        </div>
-        <div class="row pt-2">
-            <div class="d-grid gap-2" style="width: 80%; margin-left: auto; margin-right: auto;">
-                <button class="btn btn-outline-light text-start position-relative" type="button" id="editAccountData">
-                  Edit Account Data
-                  <span class="position-absolute top-50 end-0 translate-middle-y me-3">&gt;</span>
-                </button>
+              <div class="row xstext">
+                <div class="col">
+                  <p>Address :</p> 
+                </div>
+                <div class="col-5 ">
+                  <p>34/88-A Jalandhar, Punjab-018811</p>
+                </div>
               </div>
-            <div class="d-grid gap-2 mt-2 mx-auto">
-                <a class="btn btn-outline-light text-start position-relative" type="button" data-bs-toggle="modal" data-bs-target="#signOutModal">
-                  Sign Out
-                  <span class="position-absolute top-50 end-0 translate-middle-y me-3">&gt;</span>
-                </a>
+              <div class="row xstext">
+                <div class="col">
+                  <p>PAN ID :</p> 
+                </div>
+                <div class="col-5 ">
+                  <p>7123718521</p>
+                </div>
+              </div>
+              <div class="row xstext">
+                  <div class="col">
+                    <p>Aadhar ID :</p> 
+                  </div>
+                  <div class="col-5 ">
+                    <div class="col">
+                      <p>1406 2217 1289</p>
+                    </div>
+                  </div>
+              </div>
+              </div>
+
             </div>
+          </div>
+        <div class="row pt-2">
+          <div class="col">
+            <div class="row mx-auto my-2">
+              <a class="btn btn-outline-light text-start position-relative" type="button" id="editAccountData">
+                <div class="row py-2">
+                  <div class="col w-auto">Edit Account Data</div>
+                  <div class="col-2"><strong><span>&gt;</span></strong></div>
+                </div>
+              </a>
+              </div>
+              <div id="editOptions" class="d-none pt-3">
+                  <div class="row mx-auto">
+                    <div class="accordion p-0" id="editAccordion">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="editPhoneHeading">
+                          <button class="accordion-button transparent-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#editPhoneCollapse" aria-expanded="true" aria-controls="editPhoneCollapse">
+                            <div class="row">
+                              <div class="col w-auto">Edit Registered Phone Number</div>
+                            </div>
+                          </button>
+                        </h2>
+                        <div id="editPhoneCollapse" class="accordion-collapse collapse show" aria-labelledby="editPhoneHeading" data-bs-parent="#editAccordion">
+                          <div class="accordion-body transparent-accordion-body">
+                            <form id="editPhoneForm">
+                              <div class="form-group mb-3">
+                                <label for="editPhoneInput" class="form-label">Enter your new phone number</label>
+                                <input type="tel" class="form-control" id="editPhoneInput" placeholder="+91 1234567890" required>
+                                <div class="invalid-feedback">Please enter a valid phone number.</div>
+                                <div class="valid-feedback">Looks good!</div>
+                              </div>
+                              <a type="submit" class="btn btn-outline-light" id="editPhoneButton">Confirm</a>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="editAddressHeading">
+                          <button class="accordion-button transparent-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#editAddressCollapse" aria-expanded="false" aria-controls="editAddressCollapse">
+                            <div class="row">
+                              <div class="col w-auto">Edit Registered Address</div>
+                            </div>
+                          </button>
+                        </h2>
+                        <div id="editAddressCollapse" class="accordion-collapse collapse" aria-labelledby="editAddressHeading" data-bs-parent="#editAccordion">
+                          <div class="accordion-body transparent-accordion-body">
+                            <form id="editAddressForm">
+                              <div class="form-group mb-3">
+                                <label for="editAddressInput" class="form-label">Enter your new address</label>
+                                <input type="text" class="form-control" id="editAddressInput" placeholder="123 Main Street, New Delhi, India" required>
+                                <div class="invalid-feedback">Please enter a valid address.</div>
+                                <div class="valid-feedback">Looks good!</div>
+                              </div>
+                              <button type="submit" class="btn btn-outline-light" id="editAddressButton">Confirm</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="editPANHeading">
+                          <button class="accordion-button transparent-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#editPANCollapse" aria-expanded="false" aria-controls="editPANCollapse">
+                            <div class="row">
+                              <div class="col w-auto">Edit PAN number</div> 
+                            </div>
+                          </button>
+                        </h2>
+                        <div id="editPANCollapse" class="accordion-collapse collapse" aria-labelledby="editPANHeading" data-bs-parent="#editAccordion">
+                          <div class="accordion-body transparent-accordion-body">
+                            <form id="editPANForm">
+                              <div class="form-group mb-3">
+                                <label for="editPANInput" class="form-label">Enter your new PAN number</label>
+                                <input type="text" class="form-control" id="editPANInput" placeholder="ABCDE1234F" required>
+                                <div class="invalid-feedback">Please enter a valid PAN number.</div>
+                                <div class="valid-feedback">Looks good!</div>
+                              </div>
+                              <button type="submit" class="btn btn-outline-light" id="editPANButton">Confirm</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="editemailHeading">
+                          <button class="accordion-button transparent-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#editemailCollapse" aria-expanded="false" aria-controls="editemailCollapse">
+                            <div class="row">
+                              <div class="col w-auto">Edit Registered Email ID</div> 
+                            </div>
+                          </button>
+                        </h2>
+                        <div id="editemailCollapse" class="accordion-collapse collapse" aria-labelledby="editemailHeading" data-bs-parent="#editAccordion">
+                          <div class="accordion-body transparent-accordion-body">
+                            <form id="editemailForm">
+                              <div class="form-group mb-3">
+                                <label for="editemailInput" class="form-label">Enter your new Email ID</label>
+                                <input type="email" class="form-control" id="editemailInput" placeholder="email@provider.com" required>
+                                <div class="invalid-feedback">Please enter a valid email ID.</div>
+                                <div class="valid-feedback">Looks good!</div>
+                              </div>
+                              <button type="submit" class="btn btn-outline-light" id="editPANButton">Confirm</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            <div class="row mx-auto my-3">
+              <a class="btn btn-outline-light text-start position-relative"  data-bs-toggle="modal" data-bs-target="#signOutModal" type="button">
+                <div class="row py-2">
+                  <div class="col w-auto">Sign Out</div>
+                  <div class="col-2"><strong><span>&gt;</span></strong></div>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
-    </div>
+        <p class=" my-1 xstext text-white">Changes in User data may need further verification before approval by the Management Committee, the process of updating data may take upto 2 weeks past submission date.<br><br>For Further Details Contact Society Management.</p>
+        <div class="row pt-2">
+          <div class="col spacer">
+              <br><br><br>
+          </div>
+      </div>
+      </div>
     <div class="bnav container-fluid p-0 bg-light text-dark fixed-bottom">
-        <ul class="nav nav-tabs justify-content-start custom nav" data-bs-theme="dark">
+        <ul class="nav nav-tabs justify-content-center custom nav" data-bs-theme="dark">
             <li class="nav-item">
                 <a href="\" class="nav-link h-100">
                     <img width="30px" class="img-fluid" src="..\imgs\bg\image002b.png" alt="">
@@ -90,7 +223,7 @@
             </svg></a>
             </li>
             <li class="nav-item">
-            <a class="nav-link active" href="/secure/notifications.html"><svg class="i-bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="31"  fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <a class="nav-link" href="/secure/notifications.html"><svg class="i-bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="31"  fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M8 17 C8 12 9 6 16 6 23 6 24 12 24 17 24 22 27 25 27 25 L5 25 C5 25 8 22 8 17 Z M20 25 C20 25 20 29 16 29 12 29 12 25 12 25 M16 3 L16 6" />
             </svg></a>
             </li>
@@ -101,7 +234,7 @@
             </svg></a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/secure/user.html"><svg id="i-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="31" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <a class="nav-link active" href="/secure/user.html"><svg id="i-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="31" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                 <path d="M22 11 C22 16 19 20 16 20 13 20 10 16 10 11 10 6 12 3 16 3 20 3 22 6 22 11 Z M4 30 L28 30 C28 21 22 20 16 20 10 20 4 21 4 30 Z" />
             </svg></a>
             </li>
@@ -110,6 +243,7 @@
     </div>
 </div>
 <script src='../style/npm_js_core2.11.8.min.js'></script>
+<script src='script/ui.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'></script> 
 </body>
 </html>

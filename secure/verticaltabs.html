@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCUTCSL::User Access::Home</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='../style/typography.css'>
+    <link rel='stylesheet' href='../style/style.css'>
+    <link rel='stylesheet' href='../style/base.css'>    
+    <link rel="stylesheet" href="style/app.css">
+    <link rel="stylesheet" href="style/transactions.css">
+</head>
+<body>
+<div class="base">
+    <div class="container-md pt-4 g-5">
+        <div class="d-flex align-items-start">
+            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#div1" type="button" role="tab" aria-controls="div1" aria-selected="true">Button1</button>
+              <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#div2" type="button" role="tab" aria-controls="div2" aria-selected="false">Button2</button>
+              <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#div3" type="button" role="tab" aria-controls="div3" aria-selected="false">Button3</button>
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="div1" role="tabpanel" aria-labelledby="v-pills-home-tab">Content for div1</div>
+              <div class="tab-pane fade" id="div2" role="tabpanel" aria-labelledby="v-pills-profile-tab">Content for div2</div>
+              <div class="tab-pane fade" id="div3" role="tabpanel" aria-labelledby="v-pills-messages-tab">Content for div3</div>
+            </div>
+          </div>
+    </div>
+<script>
+    document.querySelectorAll('#v-pills-tab button').forEach(button => {
+  button.addEventListener('click', function (e) {
+    e.preventDefault();
+    let tabTrigger = new bootstrap.Tab(this);
+    tabTrigger.show();
+  });
+});
+
+var tabEl = document.querySelectorAll('#v-pills-tab button')
+tabEl.forEach(function (el) {
+  el.addEventListener('shown.bs.tab', function (e) {
+    var target = e.target.getAttribute('data-bs-target');
+    document.querySelectorAll('.tab-pane').forEach(function (pane) {
+      if ('#' + pane.id !== target) {
+        pane.classList.remove('show', 'active');
+      }
+    });
+  });
+});
+
+</script>
+
+<script src='../style/npm_js_core2.11.8.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'></script> 
+
+</body>
+</html>

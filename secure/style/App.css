@@ -10,7 +10,7 @@ p,.carousel-indicators{
     margin: 0;
     margin-bottom: 0;
 }
-body{
+body, .transparent-accordion-button, .transparent-accordion-body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(3,8,13);
 }
@@ -111,5 +111,24 @@ svg:hover,svg:focus{
     fill: lightblue;
     stroke-width: 2;
 }
-
-
+.transparent-accordion-button, .transparent-accordion-body {
+    border-color: white;
+    color: white;
+  }
+  
+.transparent-accordion-body {
+background-color: rgb(3,8,13);
+border-color: white;
+color: white;
+}
+.mini-card{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.mini-button{
+    width: 90%;
+    margin: 5%;
+}

@@ -132,3 +132,35 @@ color: white;
     width: 90%;
     margin: 5%;
 }
+.vnav-group{
+    padding: 0;
+    padding-left: 3%;
+}
+.vnav-group button:not(:first-child):not(:last-child){
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+.vnav-group button:first-child{
+    border-bottom-width: 0;
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 20px !important;
+}
+.vnav-group button:last-child{
+    border-top-width: 0;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 20px !important;
+ }
+.vnav.active{
+    background: rgb(12, 32, 51);
+}
+.vnav{
+    background: white;
+    color: black;
+    border-radius: 0;
+}
+.vnav{
+    stroke: black;
+}
+.vnav.active svg{
+    stroke: white;
+}

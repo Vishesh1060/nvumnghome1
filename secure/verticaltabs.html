@@ -13,43 +13,181 @@
 </head>
 <body>
 <div class="base">
-    <div class="container-md pt-4 g-5">
-        <div class="d-flex align-items-start">
-            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#div1" type="button" role="tab" aria-controls="div1" aria-selected="true">Button1</button>
-              <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#div2" type="button" role="tab" aria-controls="div2" aria-selected="false">Button2</button>
-              <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#div3" type="button" role="tab" aria-controls="div3" aria-selected="false">Button3</button>
-            </div>
-            <div class="tab-content" id="v-pills-tabContent">
-              <div class="tab-pane fade show active" id="div1" role="tabpanel" aria-labelledby="v-pills-home-tab">Content for div1</div>
-              <div class="tab-pane fade" id="div2" role="tabpanel" aria-labelledby="v-pills-profile-tab">Content for div2</div>
-              <div class="tab-pane fade" id="div3" role="tabpanel" aria-labelledby="v-pills-messages-tab">Content for div3</div>
-            </div>
+  <div class="container-md pt-4 g-5">
+    <div class="row">
+      <div class="col">
+        <div class="d-flex align-items-start">    
+          <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="div1" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                  <div class="row pb-2">
+                    <div class="col">
+                      <h1 class="">Amount<br>Calculation</h1>
+                      <p class="xstext">Calculate your Installment details.<br>Then press next to select Payment Option.</p>
+                      <p>Account Details:</p>
+                      <div class="col xstext">                     
+                        <div class="row">
+                              <div class="col"><p>Active Loan:</p></div>
+                              <div class="col-3"><p class="me-auto text-failure">Yes</p></div>    
+                          </div> 
+                          <div class="row">
+                              <div class="col">
+                                  <p>Outstanding Loan Amount:</p>         
+                              </div>
+                              <div class="col-3 me-auto">
+                                <p>₹ 50,000/-</p>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col">
+                                  Loan Installment Amount:        
+                              </div>
+                              <div class="col-3 me-auto">
+                                  <p>₹ 5,000/-</p>
+                              </div>
+                          </div>
+                          
+                          <div class="row">
+                              <div class="col">
+                                  <p>Outstanding penalties:</p>        
+                              </div>
+                              <div class="col-3 me-auto">
+                                  <p class="text-successful">None</p>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-1">
+                      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="vnav nav-link active rounded-top" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#div1" type="button" role="tab" aria-controls="div1" aria-selected="true">Calculate</button>
+                        <button class="vnav nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#div2" type="button" role="tab" aria-controls="div2" aria-selected="false">Pay</button>
+                        <button class="vnav nav-link rounded-bottom" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#div3" type="button" role="tab" aria-controls="div3" aria-selected="false">Confirm</button>
+                      </div>
+                    </div>
+                  </div> 
+                  <form action="post" id="InstallmentData">
+                    <div class="row py-3">
+                        <p class="mb-2 xstext">Fill the following details:</p>
+                        <hr>
+                        <h5>Duration</h5>
+                        <p class="xstext followup">Members are encouraged to make advance payments to avoid any late penalty.</p>
+                        <div class="col my-3">
+                            <div class="card border-1 rounded-1">
+                                <div class="card-body">
+                                    <div class="row mini-card">
+                                        <div class="col mini-card">
+                                            <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(12)">12<br>Months</button>
+                                        </div>
+                                        <div class="col mini-card">
+                                            <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(8)">8<br>Months</button>
+                                        </div>
+                                        <div class="col mini-card">
+                                            <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(6)">6<br>Months</button>
+                                        </div>
+                                    </div>
+                                    <div class="row mini-card">
+                                        <div class="col mini-card">
+                                            <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(3)">3<br>Months</button>
+                                        </div>
+                                        <div class="col mini-card">
+                                            <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(1)">1<br>Month</button>
+                                        </div>
+                                        <div class="col mini-card">
+                                            <button id="customButton" type="button" class="btn btn-outline-dark mini-button" onclick="toggleCustomInput()">Custom</button>
+                                            <input type="number" id="customInput" class="form-control" style="display:none;" placeholder="Months" onchange="setCustomMonth(this.value)">
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="selectedMonth" name="selectedMonth" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <h5>Additional Payment</h5>
+                        <p class="xstext followup">Optional Deposit offers a 3% interest rate.</p>
+                        <div class="col my-3">
+                            <div class="card border-1 rounded-1">
+                                <div class="card-body">
+                                    <div class="row mini-card">
+                                        <div class="col mini-card">
+                                            <a class="btn disabled btn-outline-dark mini-button extra">Fixed Deposit*</a>
+                                        </div>
+                                        <div class="col mini-card">
+                                            <a id="extraOD" class="btn btn-outline-dark mini-button extra">Extra OD Deposit</a>
+                                        </div>
+                                        <div class="col mini-card">
+                                            <a id="noneBtn" class="btn btn-outline-dark mini-button extra active">None</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="xstext followup mt-3">*Fixed Deposit Service may be added in future</p>
+                        <input type="submit" class="btn btn-outline-light my-3 w-100" name="Next" id="Next">
+                    
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="div2" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                  <div class="row py-2">
+                    <h1>Total Amount</h1>
+                    <hr>
+                    <div class="col xstext">
+                        <div class="row">
+                            <div class="col">
+                                <p>Loan Installment</p>
+                            </div>
+                            <div class="col">
+                                <p>₹ 6000 (500/Month)</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Loan Late Penalty</p>
+                            </div>
+                            <div class="col">
+                                <p>₹ 50</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>CD Amount</p>
+                            </div>
+                            <div class="col">
+                                <p>₹ 1200 (200/Month)</p>
+                            </div>
+    
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>MWF Amount</p>
+                            </div>
+                            <div class="col">
+                                <p>₹ 12000 (1000/Month)</p>
+                            </div>
+                        </div>
+                        <div class="row my-1">
+                            <div class="col">
+                                <p><strong>Total Amount</strong></p>
+                            </div>
+                            <div class="col">
+                                <p><strong>₹ 22800 (1900/Month)</strong></p>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col spacer">
+                                <br><br><br>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="div3" role="tabpanel" aria-labelledby="v-pills-messages-tab">Content for div3</div>
           </div>
+        </div>  
+      </div>
     </div>
-<script>
-    document.querySelectorAll('#v-pills-tab button').forEach(button => {
-  button.addEventListener('click', function (e) {
-    e.preventDefault();
-    let tabTrigger = new bootstrap.Tab(this);
-    tabTrigger.show();
-  });
-});
+  </div>
+</div>
 
-var tabEl = document.querySelectorAll('#v-pills-tab button')
-tabEl.forEach(function (el) {
-  el.addEventListener('shown.bs.tab', function (e) {
-    var target = e.target.getAttribute('data-bs-target');
-    document.querySelectorAll('.tab-pane').forEach(function (pane) {
-      if ('#' + pane.id !== target) {
-        pane.classList.remove('show', 'active');
-      }
-    });
-  });
-});
-
-</script>
-
+<script src="script/ui3.js"></script>
 <script src='../style/npm_js_core2.11.8.min.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'></script> 
 

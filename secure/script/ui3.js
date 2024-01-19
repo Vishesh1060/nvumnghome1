@@ -1,20 +1,12 @@
-document.querySelectorAll('#v-pills-tab button').forEach(button => {
-    button.addEventListener('click', function (e) {
-      e.preventDefault();
-      let tabTrigger = new bootstrap.Tab(this);
-      tabTrigger.show();
+let buttons = document.querySelectorAll(".vnav");
+
+buttons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    buttons.forEach(function(btn) {
+      btn.classList.remove("active");
+      btn.setAttribute("aria-selected", "false");
     });
+    button.classList.add("active");
+    button.setAttribute("aria-selected", "true");
   });
-  
-  var tabEl = document.querySelectorAll('#v-pills-tab button')
-  tabEl.forEach(function (el) {
-    el.addEventListener('shown.bs.tab', function (e) {
-      var target = e.target.getAttribute('data-bs-target');
-      document.querySelectorAll('.tab-pane').forEach(function (pane) {
-        if ('#' + pane.id !== target) {
-          pane.classList.remove('show', 'active');
-        }
-      });
-    });
-  });
-  
+});

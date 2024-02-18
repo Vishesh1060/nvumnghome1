@@ -20,7 +20,7 @@
                 <div class="row">
                   <h1>Brief<br>Payment<br>Synopsis</h1><hr>
                   <div class="col">
-                    <p class="xstext">Based on entered data.<br>The calculated amount is:<br>(INR/Indian Rupees/₹)<br></p>
+                    <p class="xstext">Based on entered data.<br>The calculated amount due is:<br>(INR/Indian Rupees/₹)<br></p>
                     <div class="row py-2">
                       <div class="col">
                           <div class="row my-3">
@@ -105,7 +105,7 @@
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <p>Are you sure you want to edit calculated data?<br>You should only do this if you know what you are doing.</p><p class="followup"><br>All deposits are manually verified and approved, Invalid Deposit transactions may get denied and refunded in 3-4 days.</p>
+                          <p>Are you sure you want to edit calculated data?</p><p class="followup"><br>All deposits are manually verified and approved, Invalid Deposit transactions may get denied and refunded in 3-4 days.</p>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancel</button>
@@ -124,9 +124,9 @@
             <div class="tab-pane fade show active text-white" id="div1" role="tabpanel" aria-labelledby="v-pills-home-tab">
                     <div class="row pb-2">
                         <div class="col">
-                            <h1><strong>Deposit</strong></h1>
-                            <p>Amount Calculation<br></p>
-                            <p class="xstext">Calculate your Installment details.<br>Then press next to select Payment Option.</p>
+                            <h1>Account Dues</h1>
+                            <p>Calculate Total Account Due<br></p>
+                            <p class="xstext">Calculate your Installment details based on your account data<br>or select Custom Payment to manually select amount.<br>Then press next to select Payment Option.</p>
                             <p class="mt-3">Account Details:</p>
                         </div>
                     </div> 
@@ -141,7 +141,7 @@
                                         <p>Outstanding Loan Amount:</p>         
                                     </div>
                                     <div class="col-3 me-auto">
-                                    <p>₹ 50,000/-</p>
+                                        <p>₹ 50,000/-</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -165,7 +165,7 @@
                     </div>
                     <form action="post" id="InstallmentData">
                     <div class="row py-3">
-                        <p class="mb-2 xstext">Fill the following details:</p>
+                        <p class="mb-2">Fill the following details:</p>
                         <hr>
                         <h5>Duration</h5>
                         <p class="xstext followup">Members are encouraged to make advance payments to avoid any late penalty.</p>
@@ -174,18 +174,15 @@
                                 <div class="card-body">
                                     <div class="row mini-card">
                                         <div class="col mini-card">
-                                            <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(12)">12<br>Months</button>
+                                            <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth('jan-july')">January<br>-July 2024</button>
                                         </div>
                                         <div class="col mini-card">
-                                            <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(8)">8<br>Months</button>
-                                        </div>
-                                        <div class="col mini-card">
-                                            <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(6)">6<br>Months</button>
+                                            <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(3)">3<br>Months</button>
                                         </div>
                                     </div>
                                     <div class="row mini-card">
                                         <div class="col mini-card">
-                                            <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(3)">3<br>Months</button>
+                                            <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(2)">2<br>Months</button>
                                         </div>
                                         <div class="col mini-card">
                                             <button type="button" class="btn btn-outline-dark mini-button" onclick="selectMonth(1)">1<br>Month</button>

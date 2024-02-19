@@ -30,15 +30,14 @@
             <div class="modal-dialog modal-fullscreen">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="sidebarModalLabel">Sidebar</h5>
+                  <h5 class="modal-title" id="sidebarModalLabel">Menu</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <!-- Sidebar content -->
-                  <a href="#">Link  1</a>
-                  <a href="#">Link  2</a>
-                  <a href="#">Link  3</a>
-                  <!-- ... -->
+                  <div class="row"><a href="/secure/admin/verify.html">Verify Transactions</a></div>
+                  <div class="row"><a href="/secure/admin/transactions.html">Approved Transactions</a></div>
+                  <div class="row"><a href="/secure/admin/notify.html">Generate Society Notifications</a></div>               
+                  <div class="row"><a href="/secure/admin/data.html">See Member Data</a></div>
                 </div>
               </div>
             </div>
@@ -96,7 +95,18 @@
                         </div>
                     </a>
                 </div>
-            </div>    
+            </div>
+            <div class="row pt-3 text-white">
+              <h6>Member Data</h6>
+              <hr class="m-0 mb-2">
+              <div class="row mx-auto my-2">
+                  <a class="btn btn-outline-light text-start position-relative" href="/secure/admin/notify.html" type="button">
+                      <div class="row py-2">
+                        <div class="col w-auto">View Society Members' Data</div>
+                      </div>
+                  </a>
+              </div>
+          </div>       
             <div class="row mx-auto my-3 text-white">
                 <a class="btn btn-outline-light text-start position-relative"  data-bs-toggle="modal" data-bs-target="#signOutModal" type="button">
                   <div class="row py-2">

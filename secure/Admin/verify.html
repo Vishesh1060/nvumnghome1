@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCUTCSL::User Access::Home</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='../../style/typography.css'>
+    <link rel='stylesheet' href='../..//style/style.css'>
+    <link rel='stylesheet' href='../../style/base.css'>    
+    <link rel="stylesheet" href="../style/app.css">
+</head>
+<body>
+<div class="base admin">
+    <div class="container-md pt-4 g-5">
+          <div class="modal fade" id="sidebarModal" tabindex="-1" aria-labelledby="sidebarModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="sidebarModalLabel">Menu</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row"><a href="/secure/admin/home.html">Home</a></div>
+                  <div class="row"><a href="/secure/admin/transactions.html">Approved Transactions</a></div>
+                  <div class="row"><a href="/secure/admin/notify.html">Generate Society Notifications</a></div>               
+                  <div class="row"><a href="/secure/admin/data.html">See Member Data</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="row">
+                <div class="col-1 pr-0 w-auto text-white">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#sidebarModal">
+                        <svg fill="#FFFFFF" version="1.1" id="sidebar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="41" viewBox="0 0 24.75 24.75" xml:space="preserve">
+                            <g>
+                            <path d="M0,3.875c0-1.104,0.896-2,2-2h20.75c1.104,0,2,0.896,2,2s-0.896,2-2,2H2C0.896,5.875,0,4.979,0,3.875z M22.75,10.375H2
+                                c-1.104,0-2,0.896-2,2c0,1.104,0.896,2,2,2h20.75c1.104,0,2-0.896,2-2C24.75,11.271,23.855,10.375,22.75,10.375z M22.75,18.875H2
+                                c-1.104,0-2,0.896-2,2s0.896,2,2,2h20.75c1.104,0,2-0.896,2-2S23.855,18.875,22.75,18.875z"/>
+                            </g>
+                        </svg>
+                      </a>
+                </div>
+                <div class="col pe-0">
+                    <p class="specialkeytext">Administrative Access</p>
+                    <p class="keytext">Management Committee Member</p>
+                </div>
+            </div>
+            <br>
+            <div class="row text-white">
+                <div class="col">
+                    <p>Welcome, Ram Kumar</p>
+                    <p class="text-successful xstext followup">Treasurer Access</p>
+                </div>
+            </div>
+            <div class="row pt-3 text-white">
+                <h6>Verify Pending Transactions*</h6>
+                <hr class="p-0 mb-2">
+                <div class="row pb-2 xstext">
+                  <div class="col">Suspense Transaction ID</div>
+                  <div class="col px-1">Amt.</div>
+                  <div class="col px-1">Cr./Deb.</div>
+                  <div class="col px-1">Date</div>
+                  <div class="col px-1">Payment Source</div>
+                  <div class="col">Verify</div>
+                </div>
+                <hr class="p-0 mb-2">
+                <div class="row pb-2 xstext followup text-center align-items-center">
+                  <div class="col">001</div>
+                  <div class="col px-1">₹ 12640/-</div>
+                  <div class="col px-1 text-successful">Cr.</div>
+                  <div class="col px-1">01/01/12</div>
+                  <div class="col px-1">GPAY<br>UTR: 1002301480</p></div>
+                  <div class="col"><button class="btn btn-outline-light xstext followup">Check Details & Verify</button></div>
+                </div>
+                <div class="row pb-2 xstext followup text-center align-items-center">
+                  <div class="col">001</div>
+                  <div class="col px-1">₹ 12640/-</div>
+                  <div class="col px-1 text-successful">Cr.</div>
+                  <div class="col px-1">01/01/12</div>
+                  <div class="col px-1">GPAY<br>UTR: 1002301480</p></div>
+                  <div class="col"><button class="btn btn-outline-light xstext followup">Check Details & Verify</button></div>
+                </div>
+                <div class="row pb-2 xstext followup text-center align-items-center">
+                  <div class="col">001</div>
+                  <div class="col px-1">₹ 12640/-</div>
+                  <div class="col px-1 text-successful">Cr.</div>
+                  <div class="col px-1">01/01/12</div>
+                  <div class="col px-1">GPAY<br>UTR: 1002301480</p></div>
+                  <div class="col"><button class="btn btn-outline-light xstext followup">Check Details & Verify</button></div>
+                </div>
+                <hr class="p-0 mb-2">
+                <p class="xstext followup">*All society transactions require mandatory manual verification and approval by atleast one member of the management committee.</p>
+            </div>
+            <div class="row pt-3 text-white">
+                <h6>Society Notifications</h6>
+                <hr class="m-0 mb-2">
+                <div class="row mx-auto my-2">
+                    <a class="btn btn-outline-light text-start position-relative" href="/secure/admin/notify.html" type="button">
+                        <div class="row py-2">
+                          <div class="col w-auto">Create new notification</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row pt-3 text-white">
+              <h6>Member Data</h6>
+              <hr class="m-0 mb-2">
+              <div class="row mx-auto my-2">
+                  <a class="btn btn-outline-light text-start position-relative" href="/secure/admin/notify.html" type="button">
+                      <div class="row py-2">
+                        <div class="col w-auto">View Society Members' Data</div>
+                      </div>
+                  </a>
+              </div>
+          </div>       
+            <div class="row mx-auto my-3 text-white">
+                <a class="btn btn-outline-light text-start position-relative"  data-bs-toggle="modal" data-bs-target="#signOutModal" type="button">
+                  <div class="row py-2">
+                    <div class="col w-auto">Sign Out</div>
+                    <div class="col-2"><strong><span>&gt;</span></strong></div>
+                  </div>
+                </a>
+            </div>
+    </div>
+</div>
+<script src='../../style/npm_js_core2.11.8.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'></script> 
+<script src="script/ui.js"></script>
+
+</body>
+</html>

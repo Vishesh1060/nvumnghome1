@@ -29,6 +29,39 @@
               </div>
             </div>
           </div>
+          <div class="modal fade" id="TransactionVerificationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-modal="true" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Approve Transaction</h5>
+                </div>
+                <div class="modal-body">
+                  <p class="xltext">Suspense Transaction ID: <strong>012</strong></p>
+                  <p class="xltext">Account Number: <strong>87</strong></p>
+                  <p class="xltext">Account Holder: Ram Kumar</p>
+                  <p class="xltext">Payment Type: Standard Jan-July installment</p>
+                  <p class="xltext">Paid on: 12/09/24</p>
+                  <p class="xltext">Amount <strong>₹ 12640/-</strong> To be Debited.</p>
+                  <p class="xltext">Payment Source: Online (GPAY)</p>
+                  <p class="xltext">UTR: <strong>1200301241</strong></p>
+                  <p class="xltext">Payment Breakdown:</p>
+                  <p class="xltext">CD Amount: ₹ 1200</p>
+                  <p class="xltext">Loan installment: ₹ 5000</p>
+                  <p class="xltext">Penalty: ₹ 440</p>
+                  <p class="xltext">MWF: ₹ 6000</p>
+                  <hr>
+                  <p class="xstext">Navumang does not collect or monitor any data related to financial transactions or app usage other than explicitly entered.<br> <br>Approval implies the committee member has matched the above data with bank records.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-dark" onclick="closeModal()">Go Back</button>
+                  <button type="button" class="btn btn-danger">Deny</button>
+                  <button type="button" class="btn btn-success">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-backdrop fade show" id="backdrop" style="display: none;"></div>
+          
             <div class="row">
                 <div class="col-1 pr-0 w-auto text-white">
                     <a type="button" data-bs-toggle="modal" data-bs-target="#sidebarModal">
@@ -53,44 +86,77 @@
                     <p class="text-successful xstext followup">Treasurer Access</p>
                 </div>
             </div>
-            <div class="row pt-3 text-white">
-                <h6>Verify Pending Transactions*</h6>
+            <h6 class="text-white pt-4">Verify Pending Transactions*</h6>
+            <div class="row pt-1 text-white">
                 <hr class="p-0 mb-2">
                 <div class="row pb-2 xstext">
-                  <div class="col">Suspense Transaction ID</div>
+                  <div class="col pe-0">Suspense Transaction ID</div>
                   <div class="col px-1">Amt.</div>
                   <div class="col px-1">Cr./Deb.</div>
                   <div class="col px-1">Date</div>
                   <div class="col px-1">Payment Source</div>
-                  <div class="col">Verify</div>
+                  <div class="col text-end">Verify</div>
                 </div>
                 <hr class="p-0 mb-2">
-                <div class="row pb-2 xstext followup text-center align-items-center">
-                  <div class="col">001</div>
+                <div id="entriesContainer">
+                <div class="row pb-2 xstext  text-center align-items-center">
+                  <div class="col pr-3">012</div>
                   <div class="col px-1">₹ 12640/-</div>
-                  <div class="col px-1 text-successful">Cr.</div>
+                  <div class="col px-1 text-successful">Deb.</div>
                   <div class="col px-1">01/01/12</div>
-                  <div class="col px-1">GPAY<br>UTR: 1002301480</p></div>
-                  <div class="col"><button class="btn btn-outline-light xstext followup">Check Details & Verify</button></div>
+                  <div class="col px-1"><p>GPAY</p><p class="xstext text-center followup">UTR: 1002301480</p></p></div>
+                  <div class="col pe-1"><button class="btn btn-outline-light mini-button xstext" onclick="openModal()">Check Details & Verify</button></div>
                 </div>
-                <div class="row pb-2 xstext followup text-center align-items-center">
-                  <div class="col">001</div>
+                <div class="row pb-2 xstext text-center align-items-center">
+                  <div class="col">014</div>
                   <div class="col px-1">₹ 12640/-</div>
-                  <div class="col px-1 text-successful">Cr.</div>
+                  <div class="col px-1 text-successful">Deb.</div>
                   <div class="col px-1">01/01/12</div>
-                  <div class="col px-1">GPAY<br>UTR: 1002301480</p></div>
-                  <div class="col"><button class="btn btn-outline-light xstext followup">Check Details & Verify</button></div>
+                  <div class="col px-1"><p>GPAY</p><p class="xstext text-center followup">UTR: 1002301480</p></div>
+                  <div class="col pe-1"><button class="btn btn-outline-light mini-button xstext" onclick="openModal()">Check Details & Verify</button></div>
                 </div>
-                <div class="row pb-2 xstext followup text-center align-items-center">
-                  <div class="col">001</div>
+                <div class="row pb-2 xstext text-center align-items-center">
+                  <div class="col">017</div>
                   <div class="col px-1">₹ 12640/-</div>
-                  <div class="col px-1 text-successful">Cr.</div>
+                  <div class="col px-1 text-successful">Deb.</div>
                   <div class="col px-1">01/01/12</div>
-                  <div class="col px-1">GPAY<br>UTR: 1002301480</p></div>
-                  <div class="col"><button class="btn btn-outline-light xstext followup">Check Details & Verify</button></div>
+                  <div class="col px-1"><p>GPAY</p><p class="xstext text-center followup">UTR: 1002301480</p></div>
+                  <div class="col pe-1"><button class="btn btn-outline-light mini-button xstext" onclick="openModal()">Check Details & Verify</button></div>
+                </div>
+                <div class="row pb-2 xstext text-center align-items-center">
+                  <div class="col">018</div>
+                  <div class="col px-1">₹ 12640/-</div>
+                  <div class="col px-1 text-successful">Deb.</div>
+                  <div class="col px-1">01/01/12</div>
+                  <div class="col px-1"><p>GPAY</p><p class="xstext text-center followup">UTR: 1002301480</p></div>
+                  <div class="col pe-1"><button class="btn btn-outline-light mini-button xstext" onclick="openModal()">Check Details & Verify</button></div>
+                </div>
+                <div class="row pb-2 xstext text-center align-items-center">
+                  <div class="col">022</div>
+                  <div class="col px-1">₹ 12640/-</div>
+                  <div class="col px-1 text-successful">Deb.</div>
+                  <div class="col px-1">01/01/12</div>
+                  <div class="col px-1"><p>GPAY</p><p class="xstext text-center followup">UTR: 1002301480</p></div>
+                  <div class="col pe-1"><button class="btn btn-outline-light mini-button xstext">Check Details & Verify</button></div>
+                </div>
+                <div class="row pb-2 xstext text-center align-items-center">
+                  <div class="col">201</div>
+                  <div class="col px-1">₹ 12640/-</div>
+                  <div class="col px-1 text-successful">Deb.</div>
+                  <div class="col px-1">01/01/12</div>
+                  <div class="col px-1"><p>GPAY</p><p class="xstext text-center followup">UTR: 1002301480</p></div>
+                  <div class="col pe-1"><button class="btn btn-outline-light mini-button xstext" onclick="openModal()">Check Details & Verify</button></div>
+                </div>
                 </div>
                 <hr class="p-0 mb-2">
                 <p class="xstext followup">*All society transactions require mandatory manual verification and approval by atleast one member of the management committee.</p>
+            </div>
+            <div class="row pt-2">
+              <div class="col">
+                  <button id="prevBtn" class="btn btn-outline-light xstext"><strong><span>&laquo;</span></strong> Previous</button>
+                  <button id="nextBtn" class="btn btn-outline-light xstext">Next <strong><span>&raquo;</span></strong></button>
+                  <p class="text-white xstext pt-2">Search by<input type="text" class="ms-2 xstext  rounded" id="searchInput" placeholder="Suspense Trsn. ID"></p>
+              </div>
             </div>
             <div class="row pt-3 text-white">
                 <h6>Society Notifications</h6>

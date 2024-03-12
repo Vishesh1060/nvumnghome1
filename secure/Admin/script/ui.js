@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     let currentPage =  0;
-    const itemsPerPage =  4;
+    const itemsPerPage = 4;
     const entries = document.querySelectorAll('#entriesContainer .row'); 
     const totalPages = Math.ceil(entries.length / itemsPerPage);
 
@@ -49,13 +49,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-function openModal() {
+
+function openModal(modalname) {
     document.getElementById("backdrop").style.display = "block";
-    document.getElementById("TransactionVerificationModal").style.display = "block";
-    document.getElementById("TransactionVerificationModal").classList.add("show");
+    document.getElementById(modalname).style.display = "block";
+    document.getElementById(modalname).classList.add("show");
 }
-function closeModal() {
+function closeModal(modalname) {
     document.getElementById("backdrop").style.display = "none";
-    document.getElementById("TransactionVerificationModal").style.display = "none";
-    document.getElementById("TransactionVerificationModal").classList.remove("show");
+    document.getElementById(modalname).style.display = "none";
+    document.getElementById(modalname).classList.remove("show");
 }

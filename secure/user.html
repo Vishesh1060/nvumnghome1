@@ -108,7 +108,10 @@
                             <form id="editPhoneForm">
                               <div class="form-group mb-3">
                                 <label for="editPhoneInput" class="form-label">Enter your new phone number</label>
-                                <input type="tel" class="form-control" id="editPhoneInput" placeholder="+91 1234567890" required>
+                                <div class="input-group">
+                                <span class="input-group-text" >+91</span>
+                                <input type="tel" class="form-control" id="editPhoneInput" placeholder="1234567890" required>
+                                </div>
                                 <div class="invalid-feedback">Please enter a valid phone number.</div>
                                 <div class="valid-feedback">Looks good!</div>
                               </div>

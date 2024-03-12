@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCUTCSL::User Access::Home</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='../../style/typography.css'>
+    <link rel='stylesheet' href='../..//style/style.css'>
+    <link rel='stylesheet' href='../../style/base.css'>    
+    <link rel="stylesheet" href="../style/app.css">
+</head>
+<body>
+<div class="base admin">
+    <div class="container-md pt-4 g-5">
+        <div class="modal fade" id="signOutModal" tabindex="-1" aria-labelledby="signOutModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="padding-top: 45vh;">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <p>Are you sure you want to sign out?</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="/" type="button" class="btn btn-outline-success">Confirm</button>
+                  <a class="btn btn-outline-dark" data-bs-dismiss="modal">Cancel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="sidebarModal" tabindex="-1" aria-labelledby="sidebarModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="sidebarModalLabel">Menu</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row"><a href="/secure/admin/verify.html">Verify Transactions</a></div>
+                  <div class="row"><a href="/secure/admin/transactions.html">Approved Transactions</a></div>
+                  <div class="row"><a href="/secure/admin/notify.html">Generate Society Notifications</a></div>               
+                  <div class="row"><a href="/secure/admin/data.html">See Member Data</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="row">
+                <div class="col-1 pr-0 w-auto text-white">
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#sidebarModal">
+                        <svg fill="#FFFFFF" version="1.1" id="sidebar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="41" viewBox="0 0 24.75 24.75" xml:space="preserve">
+                            <g>
+                            <path d="M0,3.875c0-1.104,0.896-2,2-2h20.75c1.104,0,2,0.896,2,2s-0.896,2-2,2H2C0.896,5.875,0,4.979,0,3.875z M22.75,10.375H2
+                                c-1.104,0-2,0.896-2,2c0,1.104,0.896,2,2,2h20.75c1.104,0,2-0.896,2-2C24.75,11.271,23.855,10.375,22.75,10.375z M22.75,18.875H2
+                                c-1.104,0-2,0.896-2,2s0.896,2,2,2h20.75c1.104,0,2-0.896,2-2S23.855,18.875,22.75,18.875z"/>
+                            </g>
+                        </svg>
+                      </a>
+                </div>
+                <div class="col pe-0">
+                    <p class="specialkeytext">Administrative Access</p>
+                    <p class="keytext">Management Committee Member</p>
+                </div>
+            </div>
+            <br>
+            <div class="row text-white">
+                <div class="col">
+                    <p>Welcome, Ram Kumar</p>
+                    <p class="text-successful xstext followup">Treasurer Access</p>
+                </div>
+            </div>
+            <div class="modal fade" id="NotificationPreviewModal" tabindex="-1" role="dialog" aria-modal="true" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Notification Preview</h5>
+                  </div>
+                  <div class="modal-body">
+                    <div class="card border-1 rounded-1">
+                      <div class="card-body">    
+                          <div class="col px-1 py-2 pb-3">
+                              <div class="row m-0 p-0">
+                                  <div class="row m-0 p-0">
+                                      <div class="col p-0 m-0"><p class="followup">General Notification</p></div>
+                                      <div class="col p-0 m-0" style="text-align: end;"><p class="followup">07/03/24</p></div>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col px-2" style="display: flex;align-items:center; max-width: fit-content;">
+                                      <svg width="32" height="31" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M12 5.5C12.5523 5.5 13 5.94772 13 6.5L13 13.5C13 14.0523 12.5523 14.5 12 14.5C11.4477 14.5 11 14.0523 11 13.5L11 6.5C11 5.94772 11.4477 5.5 12 5.5Z" fill="#000000"></path>
+                                          <path d="M12 18.5C12.8284 18.5 13.5 17.8284 13.5 17C13.5 16.1716 12.8284 15.5 12 15.5C11.1716 15.5 10.5 16.1716 10.5 17C10.5 17.8284 11.1716 18.5 12 18.5Z" fill="#000000"></path>
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3Z" fill="#000000"></path>
+                                          </svg>
+                                  </div>
+                                  <div class="col p-0">
+                                      <p>Members are Invited to AGM Scheduled on 10/03/2024</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                    <hr>
+                    <div class="card border-1 rounded-1">
+                      <div class="card-body">    
+                          <div class="col px-1 py-2 pb-3">
+                              <div class="row m-0 p-0">
+                                  <div class="col p-0 m-0"><p class="followup">General Notification</p></div>
+                                  <div class="col p-0 m-0" style="text-align: end;"><p class="followup">07/03/24</p></div>
+                              </div>
+                              <div class="col p-0">
+                                  <p>Members are Invited to AGM scheduled on 10/03/2024</p>
+                                  <p class="xstext">Greetings to all our esteemed members!<br>
+                                      We are delighted to announce that our cooperative society will be holding its 6th annual general meeting at the venue:<br>
+                                      <br>
+                                      28/34-A, Rana Pratap Street No.1, Chajjupur, East Babarpur, Shahdara, Delhi-110032
+                                      on Saturday, 15th October 2023
+                                      at 10:00 AM.
+                                      <br>
+                                      We cordially invite all of you to attend this important event and participate in the discussions and decisions that will shape the future of our society.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                    <hr>
+                    <p class="xstext">Navumang does not collect or monitor any data related to financial transactions or app usage other than explicitly entered.<br> <br>Approval implies the committee member has matched the above data with bank records.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" onclick="closeModal('NotificationPreviewModal')">Go Back</button>
+                    <button type="button" class="btn btn-danger">Deny</button>
+                    <button type="button" class="btn btn-success">Confirm</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-backdrop fade show" id="backdrop" style="display: none;"></div>
+  
+            <div class="row pt-3 text-white">
+                <h3>Generate<br>Society Notifications</h3>
+                <hr class="m-0 mb-2">
+                  <form action="post" id="CreateNotification">
+                    <div class="row py-1">
+                        <div>
+                            <div class="form-group mb-3">
+                              <label for="NotificationHeadingInput" class="form-label">Notification Heading</label>
+                              <input class="form-control" id="NotificationHeadingInput" placeholder="Write a brief heading." required>
+                              <label for="EditNotificationBodyInput" class="form-label pt-2">Details</label>
+                                <textarea class="form-control" id="NotificationBodyInput" placeholder="Write the main text of the notification."></textarea>
+                            </div>
+                        </div>
+
+                        <h5>Notification Type</h5>
+                        <p class="xstext followup">Notifications come in 2 classes: General Announcement and Alert. Alerts carry higher priority and should be reserved for important information.</p>
+                        <div class="col my-3">
+                            <div class="card border-1 rounded-1">
+                                <div class="card-body">
+                                    <div class="row mini-card">
+                                        <div class="col mini-card">
+                                            <a class="btn disabled btn-outline-dark mini-button extra">Alert<br>⚠️</a>
+                                        </div>
+                                        <div class="col mini-card">
+                                            <a id="noneBtn" class="btn btn-outline-dark mini-button extra active">General Announcement</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mx-auto my-3 text-white">
+                          <a class="btn btn-outline-light text-start position-relative" onclick="openModal('NotificationPreviewModal')" type="button">
+                            <div class="row py-2">
+                              <div class="col w-auto">Confirm Details and Preview.</div>
+                              <div class="col-2"><strong><span>&gt;</span></strong></div>
+                            </div>
+                          </a>
+                      </div>
+                        <!--<input name="Next" id="Next" type="submit" class="btn btn-outline-light my-3 w-100">-->
+                    
+                    </div>
+                    </form>
+                
+            </div>    
+            <div class="row mx-auto my-3 text-white">
+              <hr>
+                <a class="btn btn-outline-light text-start position-relative"  data-bs-toggle="modal" data-bs-target="#signOutModal" type="button">
+                  <div class="row py-2">
+                    <div class="col w-auto">Sign Out</div>
+                    <div class="col-2"><strong><span>&gt;</span></strong></div>
+                  </div>
+                </a>
+            </div>
+    </div>
+</div>
+<script src='../../style/npm_js_core2.11.8.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js'></script> 
+<script src="script/ui.js"></script>
+
+</body>
+</html>

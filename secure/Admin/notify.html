@@ -129,8 +129,7 @@
                   
                   <div class="modal-footer">
                     <button type="button" class="btn btn-outline-dark" onclick="closeModal('NotificationPreviewModal')">Go Back</button>
-                    <button type="button" class="btn btn-danger">Deny</button>
-                    <button type="button" class="btn btn-success">Confirm</button>
+                    <button id="NotificationPreviewModalSubmit" type="submit" class="btn btn-success">Confirm and Generate Notification.</button>
                   </div>
                 </div>
               </div>
@@ -145,9 +144,9 @@
                         <div>
                             <div class="form-group mb-3">
                               <label for="NotificationHeadingInput" class="form-label">Notification Heading</label>
-                              <input class="form-control" id="NotificationHeadingInput" placeholder="Write a brief heading." required>
+                              <input name="notificationheading" class="form-control" id="NotificationHeadingInput" placeholder="Write a brief heading." required>
                               <label for="EditNotificationBodyInput" class="form-label pt-2">Details</label>
-                                <textarea class="form-control" id="NotificationBodyInput" placeholder="Write the main text of the notification."></textarea>
+                                <textarea name="notificationbody" class="form-control" id="NotificationBodyInput" placeholder="Write the main text of the notification." required></textarea>
                             </div>
                         </div>
 
@@ -158,10 +157,10 @@
                                 <div class="card-body">
                                     <div class="row mini-card">
                                         <div class="col mini-card">
-                                            <a class="btn disabled btn-outline-dark mini-button extra">Alert<br>⚠️</a>
+                                            <button type="button" class="btn btn-outline-dark mini-button" name="Alert" onclick="makeButtonActive(event)">Alert<br>⚠️</button>
                                         </div>
                                         <div class="col mini-card">
-                                            <a id="noneBtn" class="btn btn-outline-dark mini-button extra active">General Announcement</a>
+                                            <button type="button" class="btn btn-outline-dark mini-button active" name="General Announcement" onclick="makeButtonActive(event)">General Announcement</button>
                                         </div>
                                     </div>
                                 </div>
